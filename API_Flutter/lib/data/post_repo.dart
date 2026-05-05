@@ -5,10 +5,8 @@ class PostRepo {
   final PostWebservice postWebservice;
   PostRepo(this.postWebservice);
 
-  Future<List<PostModel>> getAllPosts() async {
-    
-      return postWebservice.getAllPosts();
-   
+  Future<List<PostModel>> getAllPosts() async { 
+    return postWebservice.getAllPosts();
   }
 
   Future<PostModel> getPostByID(String postId) async {

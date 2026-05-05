@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_api/business/cubit/post_cubit.dart';
 import 'package:my_api/business/cubit/post_state.dart';
+import 'package:my_api/data/post_model.dart';
 
 class MyWidget extends StatefulWidget {
   const MyWidget({super.key});
@@ -15,6 +16,7 @@ class _MyWidgetState extends State<MyWidget> {
   @override
   void initState() {
     super.initState();
+    PostModel post=PostModel(content: "h", id: "h" ,title: "h");
     BlocProvider.of<PostCubit>(context).getAllPosts();
   }
 
